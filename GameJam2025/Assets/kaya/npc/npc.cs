@@ -20,7 +20,13 @@ public class npc : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+
+       
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
         {
             if (talk)
             {
@@ -38,7 +44,15 @@ public class npc : MonoBehaviour
                 talk = false;
             }
         }
-       
-        
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            if (talk == false)
+            {
+                talk = true;
+            }
+        }
     }
 }
