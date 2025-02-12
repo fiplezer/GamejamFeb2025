@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 665794862}
   - component: {fileID: 665794861}
   m_Layer: 0
-  m_Name: inv
+  m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -268,9 +268,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1583843568}
+  - component: {fileID: 1583843569}
   - component: {fileID: 1583843567}
   m_Layer: 0
-  m_Name: unlockthing
+  m_Name: npc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -305,6 +306,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1583843569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583843566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef789f88f0377604f90fbe83eecb6e89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textbeforecheck: hi
+  textcheck: do you have my key
+  textcheckfalse: get my key and come back
+  textchecktrue: thanks so much
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
