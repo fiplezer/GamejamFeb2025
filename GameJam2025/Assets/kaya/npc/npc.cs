@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class npc : MonoBehaviour
 {
-    bool talk = true;
+    public bool talk = true;
     unlock unlock;
     public string textbeforecheck;
     public string textcheck;
