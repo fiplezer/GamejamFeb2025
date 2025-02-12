@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - TeleportTarget
+  - Teleport
+  - Object
+  - TeleportTarget 2
   layers:
   - Default
   - TransparentFX
