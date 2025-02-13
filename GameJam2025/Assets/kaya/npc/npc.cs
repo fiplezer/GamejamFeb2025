@@ -30,17 +30,7 @@ public class npc : MonoBehaviour
         {
             if (talk)
             {
-                Debug.Log(textbeforecheck);
-                Debug.Log(textcheck);
-
-                if (unlock.unlocked)
-                {
-                    Debug.Log(textchecktrue);
-                }
-                else
-                {
-                    Debug.Log(textcheckfalse);
-                }
+                gameObject.GetComponent<npcui>().speak = true;
                 talk = false;
             }
         }

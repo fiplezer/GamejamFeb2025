@@ -1,40 +1,93 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class npcui : MonoBehaviour
 {
-    int counter;
-    public List<string> text = new List<string>();
-    public List<string> textkeuze1 = new List<string>();
-    public List<string> textkeuze2 = new List<string>();
-    public List<string> textkeuze3 = new List<string>();
+    public string text;
+    public string textkeuze1;
+    public string textkeuze2;
+    public string textkeuze3;
+
+
+    public string textresponse1;
+    public string textresponse2;
+    public string textresponse3;
+
 
     public TextMeshProUGUI displaytext;
-    public Button yes;
-    public Button no;
+
     public bool makechoise;
+    public bool chosen;
+    public bool speak;
+    enum choise
+    {
+        one,
+        two,
+        three
+    }
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        text.Add(gameObject.GetComponent<npc>().textbeforecheck);
-        text.Add(gameObject.GetComponent<npc>().textcheck);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (speak)
         {
-            displaytext.text = text[counter];
-            counter++;
-        }
-        if (makechoise)
-        {
+            if (Input.GetKeyDown(KeyCode.Space) && !makechoise)
+            {
+                displaytext.text = text;
+                if (!chosen)
+                {
+                    makechoise = true;
+                    return;
+                }
 
+            }
+            if (makechoise)
+            {
+
+                if (Input.GetKeyDown(KeyCode.Alpha1))
+                {
+                    choise choise = choise.one;
+                    displaytext.text = textkeuze1;
+
+                    WaitForSeconds forSeconds = new WaitForSeconds(1);
+
+                    text = textresponse1;
+                    makechoise = false;
+                    chosen = true;
+                }
+                if (Input.GetKeyDown(KeyCode.Alpha2))
+                {
+                    choise choise = choise.two;
+                    displaytext.text = textkeuze2;
+                    WaitForSeconds forSeconds = new WaitForSeconds(1);
+
+                    text = textresponse2;
+                    makechoise = false;
+                    chosen = true;
+                }
+                if (Input.GetKeyDown(KeyCode.Alpha3))
+                {
+                    choise choise = choise.three;
+                    displaytext.text = textkeuze3;
+                    WaitForSeconds forSeconds = new WaitForSeconds(1);
+
+                    text = textresponse3;
+                    makechoise = false;
+                    chosen = true;
+                }
+            }
         }
+        
     }
 }
