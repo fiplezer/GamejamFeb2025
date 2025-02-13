@@ -8,6 +8,12 @@ TagManager:
   - Teleport
   - Object
   - TeleportTarget 2
+  - TeleportTarget 3
+  - TeleportTarget 4
+  - TeleportTarget 5
+  - TeleportTarget 6
+  - TeleportTarget 7
+  - TeleportTarget 8
   layers:
   - Default
   - TransparentFX

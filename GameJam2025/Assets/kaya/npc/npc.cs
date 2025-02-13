@@ -6,10 +6,7 @@ public class npc : MonoBehaviour
 {
     public bool talk = true;
     unlock unlock;
-    public string textbeforecheck;
-    public string textcheck;
-    public string textcheckfalse;
-    public string textchecktrue;
+
     
     // Start is called before the first frame update
     void Start()
@@ -26,33 +23,34 @@ public class npc : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (unlock.unlocked)
         {
-            if (talk)
+            if (collision.gameObject.tag == "Player")
             {
-                Debug.Log(textbeforecheck);
-                Debug.Log(textcheck);
-
-                if (unlock.unlocked)
+                if (talk)
                 {
-                    Debug.Log(textchecktrue);
+                    gameObject.GetComponent<npcui>().speak = true;
+                    talk = false;
                 }
-                else
-                {
-                    Debug.Log(textcheckfalse);
-                }
-                talk = false;
             }
         }
+        else if (!unlock.unlocked)
+        {
+            if (collision.gameObject.tag == "Player")
+            {
+                if (talk)
+                {
+                    gameObject.GetComponent<npcui>().speak = true;
+                }
+            }
+        }
+        
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (talk == false)
-            {
-                talk = true;
-            }
+            gameObject.GetComponent<npcui>().speak = false;
         }
     }
 }
