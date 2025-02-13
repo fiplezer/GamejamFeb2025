@@ -5,11 +5,11 @@ using UnityEngine;
 public class door : MonoBehaviour
 {
     unlock unlock;
-    GameObject Doorcol;
+    public GameObject Doorcol;
     // Start is called before the first frame update
     void Start()
     {
-        
+        unlock = gameObject.GetComponent<unlock>();
     }
 
     // Update is called once per frame
