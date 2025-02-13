@@ -8,6 +8,9 @@ using UnityEngine.UI;
 
 public class npcui : MonoBehaviour
 {
+
+    public bool played = false;
+
     AudioSource audio;
     public AudioClip one;
     public AudioClip lockedaudio;
@@ -72,15 +75,8 @@ public class npcui : MonoBehaviour
         Debug.Log("Started Coroutine at timestamp : " + Time.time);
         
         //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(1);
-        if (Stage == stage.text)
-        {
-            Stage = stage.textkeuze;
-        }
-        else if(Stage == stage.textkeuze)
-        {
-            Stage = stage.textresponse;
-        }
+        yield return new WaitForSeconds(time);
+
 
         //After we have waited 5 seconds print the time again.
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
@@ -102,6 +98,25 @@ public class npcui : MonoBehaviour
         audio.clip = otherClip;
         audio.Play();
         yield return new WaitForSeconds(otherClip.length);
+    }
+    IEnumerator PlayAudioAndWait(AudioClip clip, float waitTime)
+    {
+        
+        yield return StartCoroutine(Startaudio(clip)); // Wacht tot de audio klaar is
+        if (Stage == stage.text)
+        {
+            Stage = stage.textkeuze;
+        }
+        if (Stage == stage.textkeuze)
+        {
+            Stage = stage.textresponse;
+        }
+        if (Stage == stage.textresponse)
+        {
+            
+        }
+        yield return new WaitForSeconds(waitTime); // Extra wachttijd
+
     }
     // Update is called once per frame
     void Update()
@@ -146,8 +161,8 @@ public class npcui : MonoBehaviour
                 {
                     Choise = choise.one;
                     displaytext.text = textkeuze1;
-                    StartCoroutine(Startaudio(keuze1audio));
-                    StartCoroutine(wait(keuze1audio.length));
+                    StartCoroutine(PlayAudioAndWait(keuze1audio, keuze1audio.length));
+                    
                     
 
                     
@@ -156,37 +171,39 @@ public class npcui : MonoBehaviour
                 {
                     Choise = choise.two;
                     displaytext.text = textkeuze2;
-                    StartCoroutine(Startaudio(keuze2audio));
-                    StartCoroutine(wait(keuze2audio.length));
+                    StartCoroutine(PlayAudioAndWait(keuze2audio, keuze2audio.length));
+
 
                 }
                 if (Input.GetKeyDown(KeyCode.Alpha3))
                 {
                     Choise = choise.three;
                     displaytext.text = textkeuze3;
+                    StartCoroutine(PlayAudioAndWait(keuze3audio, keuze3audio.length));
 
-                    StartCoroutine(Startaudio(keuze3audio));
-                    StartCoroutine(wait(keuze3audio.length));
                 }
 
             }
-            else if (Stage == stage.textresponse)
+            else if (Stage == stage.textresponse && !played)
             {
                 if (Choise == choise.one)
                 {
                     displaytext.text = textresponse1;
-                    StartCoroutine(Startaudio(response1audio));
+                    StartCoroutine(PlayAudioAndWait(response1audio,response1audio.length));
+                    played = true;
                 }
                 if (Choise == choise.two)
                 {
                     displaytext.text = textresponse2;
-                    StartCoroutine(Startaudio(response2audio));
+                    StartCoroutine(PlayAudioAndWait(response2audio, response2audio.length));
+                    played = true;
 
                 }
                 if (Choise == choise.three)
                 {
                     displaytext.text = textresponse3;
-                    StartCoroutine(Startaudio(response3audio));
+                    StartCoroutine(PlayAudioAndWait(response3audio, response3audio.length));
+                    played = true;
 
                 }
 
