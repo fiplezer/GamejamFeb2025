@@ -281,7 +281,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 935213403
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 3750445756357391431, guid: f812282260a85de4196fa640ee2227fb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1716,6 +1716,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7218753002714824277, guid: e4b80e0ffa4a1f84b83ece29863a79a1, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 6985829287545914934, guid: 448ec916e7a86474cb757f2021f1329a, type: 2}
     - target: {fileID: 9082341729942006838, guid: e4b80e0ffa4a1f84b83ece29863a79a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.5779808
@@ -2091,7 +2095,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 935213403
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
