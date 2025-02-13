@@ -15,6 +15,10 @@ public class npcui : MonoBehaviour
     public string textkeuze2;
     public string textkeuze3;
 
+    public TextMeshProUGUI keuze1;
+    public TextMeshProUGUI keuze2;
+    public TextMeshProUGUI keuze3;
+
 
     public string textresponse1;
     public string textresponse2;
@@ -22,6 +26,7 @@ public class npcui : MonoBehaviour
 
 
     public TextMeshProUGUI displaytext;
+    
 
     public bool makechoise;
     public bool chosen;
@@ -32,96 +37,124 @@ public class npcui : MonoBehaviour
         two,
         three
     }
-    
+    public enum stage
+    {
+        text,
+        textkeuze,
+        textresponse
+    }
+    public stage Stage = new stage();
+    choise Choise = new choise();
 
     // Start is called before the first frame update
     void Start()
     {
         unlock = GetComponentInChildren<unlock>();
     }
-    IEnumerator wait(string newtext,float time)
+    IEnumerator wait(float time)
     {
         //Print the time of when the function is first called.
         Debug.Log("Started Coroutine at timestamp : " + Time.time);
-
+        
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(1);
-        displaytext.text = newtext;
+        if (Stage == stage.text)
+        {
+            Stage = stage.textkeuze;
+        }
+        else if(Stage == stage.textkeuze)
+        {
+            Stage = stage.textresponse;
+        }
+
         //After we have waited 5 seconds print the time again.
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
     }
+
     // Update is called once per frame
     void Update()
     {
         if (speak)
         {
-            if (!unlock.unlocked)
+            if (Stage == stage.text)
             {
-                if (Input.GetKeyDown(KeyCode.Space) && !makechoise)
+                if (!unlock.unlocked)
                 {
-                    displaytext.text = textlocked;
-                    WaitForSeconds forSeconds = new WaitForSeconds(1);
-                    string newtext = "";
-                    StartCoroutine(wait(newtext,1));
+                    if (Input.GetKeyDown(KeyCode.Space) && !makechoise)
+                    {
+                        displaytext.text = textlocked;
+                        string newtext = "";
+                        StartCoroutine(wait(1));
+
+                    }
+                }
+                else
+                {
+                    if (Input.GetKeyDown(KeyCode.Space) && !makechoise)
+                    {
+                        displaytext.text = text;
+                        if (!chosen)
+                        {
+                            makechoise = true;
+                            keuze1.text = textkeuze1;
+                            keuze2.text = textkeuze2;
+                            keuze3.text = textkeuze3;
+                            Stage = stage.textkeuze;
+                        }
+
+                    }
+                }
+               
+            }
+            else if (Stage == stage.textkeuze)
+            {
+                if (Input.GetKeyDown(KeyCode.Alpha1))
+                {
+                    Choise = choise.one;
+                    displaytext.text = textkeuze1;
+
+                    StartCoroutine(wait(1));
+                    
+
                     
                 }
+                if (Input.GetKeyDown(KeyCode.Alpha2))
+                {
+                    Choise = choise.two;
+                    displaytext.text = textkeuze2;
+
+
+                    StartCoroutine(wait(1));
+
+                }
+                if (Input.GetKeyDown(KeyCode.Alpha3))
+                {
+                    Choise = choise.three;
+                    displaytext.text = textkeuze3;
+
+                    StartCoroutine(wait(1));
+                }
+
             }
-            else
+            else if (Stage == stage.textresponse)
             {
-                if (Input.GetKeyDown(KeyCode.Space) && !makechoise)
+                if (Choise == choise.one)
                 {
-                    displaytext.text = text;
-                    if (!chosen)
-                    {
-                        makechoise = true;
-                        return;
-                    }
-
+                    displaytext.text = textresponse1;
+                   
                 }
-                if (makechoise)
+                if (Choise == choise.two)
                 {
-
-                    if (Input.GetKeyDown(KeyCode.Alpha1))
-                    {
-                        choise choise = choise.one;
-                        displaytext.text = textkeuze1;
-
-                        WaitForSeconds forSeconds = new WaitForSeconds(1);
-
-                        text = textresponse1;
-                        string newtext = "";
-                        StartCoroutine(wait(newtext, 1));
-                        makechoise = false;
-                        chosen = true;
-                    }
-                    if (Input.GetKeyDown(KeyCode.Alpha2))
-                    {
-                        choise choise = choise.two;
-                        displaytext.text = textkeuze2;
-                        WaitForSeconds forSeconds = new WaitForSeconds(1);
-
-                        text = textresponse2;
-                        string newtext = "";
-                        StartCoroutine(wait(newtext, 1));
-                        makechoise = false;
-                        chosen = true;
-                    }
-                    if (Input.GetKeyDown(KeyCode.Alpha3))
-                    {
-                        choise choise = choise.three;
-                        displaytext.text = textkeuze3;
-                        WaitForSeconds forSeconds = new WaitForSeconds(1);
-
-                        text = textresponse3;
-                        string newtext = "";
-                        StartCoroutine(wait(newtext,1));
-                        makechoise = false;
-                        chosen = true;
-                    }
+                    displaytext.text = textresponse2;
+                   
                 }
+                if (Choise == choise.three)
+                {
+                    displaytext.text = textresponse3;
+                    
+                }
+               
             }
-        }
-            
-        
+        }        
     }
 }
