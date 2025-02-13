@@ -480,7 +480,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 165213324}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 705009458}
+        m_TargetAssemblyTypeName: EscMenu, Assembly-CSharp
+        m_MethodName: StartMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &165213324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1585,9 +1597,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9570feb4a6477e94f856f76dc84be57b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSlider: {fileID: 0}
-  voiceSlider: {fileID: 0}
-  audioMixer: {fileID: 0}
+  musicSlider: {fileID: 349126900}
+  voiceSlider: {fileID: 1340598585}
+  audioMixer: {fileID: 24100000, guid: 448ec916e7a86474cb757f2021f1329a, type: 2}
+  ingameMenu: {fileID: 638259617}
+  PauseMenu: 0
 --- !u!4 &705009459
 Transform:
   m_ObjectHideFlags: 0
@@ -2574,6 +2588,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7218753002714824277, guid: e4b80e0ffa4a1f84b83ece29863a79a1, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7218753002714824277, guid: e4b80e0ffa4a1f84b83ece29863a79a1, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 6985829287545914934, guid: 448ec916e7a86474cb757f2021f1329a, type: 2}
@@ -3509,7 +3527,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1770989980}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 705009458}
+        m_TargetAssemblyTypeName: EscMenu, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1770989980
 MonoBehaviour:
   m_ObjectHideFlags: 0
