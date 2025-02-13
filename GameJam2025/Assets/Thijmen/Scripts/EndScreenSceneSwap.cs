@@ -11,7 +11,7 @@ public class SceneChangeOnCollision : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Changing scene to: " + sceneNaam);
-            SceneManager.LoadScene(sceneNaam);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
@@ -21,7 +21,7 @@ public class SceneChangeOnCollision : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Changing scene to: " + sceneNaam);
-            SceneManager.LoadScene(sceneNaam);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
