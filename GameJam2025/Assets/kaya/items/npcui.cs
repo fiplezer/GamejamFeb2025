@@ -115,7 +115,7 @@ public class npcui : MonoBehaviour
         yield return new WaitForSeconds(waitTime); // Extra wachttijd
         if (Stage == stage.textresponse)
         {
-            displaytext.text = "";
+            displaytext.text = ""; 
         }
     }
     // Update is called once per frame
