@@ -119,6 +119,171 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!43 &75565321
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 11
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 36
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 20
+    localAABB:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.44999695, y: 0.44999695, z: 0}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 00000400050005000100000001000800090009000200010002000c000d000d000300020003001000110011000000030000000600070001000a000b0002000e000f00030012001300
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 20
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 560
+    _typelessdata: 0066e63e0066e63e00000000000080bf000000000066e6be0066e63e0066e6be0066e63e00000000000080bf000000000066e6be0066e6be0066e6be0066e6be00000000000080bf000000000066e63e0066e6be0066e63e0066e6be00000000000080bf000000000066e63e0066e63e0066e63e0066e63e0000000000000000000000000066e6be0066e63e0066e6be0066e63e0000000000000000000000000066e63e0066e63e0066e63e0066e63e000000000000803f000000000066e6be0066e63e0066e63e0066e63e0000000000004040000000000066e6be0066e63e0066e6be0066e63e0000000000000000000000000066e6be0066e6be0066e6be0066e6be0000000000000000000000000066e6be0066e63e0066e6be0066e63e000000000000803f000000000066e6be0066e6be0066e6be0066e63e0000000000004040000000000066e6be0066e6be0066e6be0066e6be0000000000000000000000000066e63e0066e6be0066e63e0066e6be0000000000000000000000000066e6be0066e6be0066e6be0066e6be000000000000803f000000000066e63e0066e6be0066e6be0066e6be0000000000004040000000000066e63e0066e6be0066e63e0066e6be0000000000000000000000000066e63e0066e63e0066e63e0066e63e0000000000000000000000000066e63e0066e6be0066e63e0066e6be000000000000803f000000000066e63e0066e63e0066e63e0066e6be0000000000004040000000000066e63e0066e63e
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_MeshUsageFlags: 0
+  m_CookingOptions: 30
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  'm_MeshMetrics[0]': 1
+  'm_MeshMetrics[1]': 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &439825233
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,7 +454,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1000}
+  m_AnchoredPosition: {x: -939, y: 571}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &554113981
@@ -377,7 +542,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -2007.7373, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -547,7 +712,7 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!43 &1157154471
+--- !u!43 &830559103
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -712,172 +877,7 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!43 &1361705897
-Mesh:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 11
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 36
-    topology: 0
-    baseVertex: 0
-    firstVertex: 0
-    vertexCount: 20
-    localAABB:
-      m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.44999695, y: 0.44999695, z: 0}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_BonesAABB: []
-  m_VariableBoneCountWeights:
-    m_Data: 
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexFormat: 0
-  m_IndexBuffer: 00000400050005000100000001000800090009000200010002000c000d000d000300020003001000110011000000030000000600070001000a000b0002000e000f00030012001300
-  m_VertexData:
-    serializedVersion: 3
-    m_VertexCount: 20
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 560
-    _typelessdata: 0066e63e0066e63e00000000000080bf000000000066e6be0066e63e0066e6be0066e63e00000000000080bf000000000066e6be0066e6be0066e6be0066e6be00000000000080bf000000000066e63e0066e6be0066e63e0066e6be00000000000080bf000000000066e63e0066e63e0066e63e0066e63e0000000000000000000000000066e6be0066e63e0066e6be0066e63e0000000000000000000000000066e63e0066e63e0066e63e0066e63e000000000000803f000000000066e6be0066e63e0066e63e0066e63e0000000000004040000000000066e6be0066e63e0066e6be0066e63e0000000000000000000000000066e6be0066e6be0066e6be0066e6be0000000000000000000000000066e6be0066e63e0066e6be0066e63e000000000000803f000000000066e6be0066e6be0066e6be0066e63e0000000000004040000000000066e6be0066e6be0066e6be0066e6be0000000000000000000000000066e63e0066e6be0066e63e0066e6be0000000000000000000000000066e6be0066e6be0066e6be0066e6be000000000000803f000000000066e63e0066e6be0066e6be0066e6be0000000000004040000000000066e63e0066e6be0066e63e0066e6be0000000000000000000000000066e63e0066e63e0066e63e0066e63e0000000000000000000000000066e63e0066e6be0066e63e0066e6be000000000000803f000000000066e63e0066e63e0066e63e0066e6be0000000000004040000000000066e63e0066e63e
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  m_MeshUsageFlags: 0
-  m_CookingOptions: 30
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  'm_MeshMetrics[0]': 1
-  'm_MeshMetrics[1]': 1
-  m_MeshOptimizationFlags: 1
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
---- !u!43 &1383311838
+--- !u!43 &1157154471
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1314,7 +1314,7 @@ MonoBehaviour:
     rid: 8605547918765326404
   m_ShadowCastingSource: 2
   m_ShadowMesh:
-    m_Mesh: {fileID: 1361705897}
+    m_Mesh: {fileID: 75565321}
     m_LocalBounds:
       m_Center: {x: 0, y: 0, z: 0}
       m_Extent: {x: 0.44999695, y: 0.44999695, z: 0}
@@ -1368,7 +1368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 850}
+  m_AnchoredPosition: {x: -939, y: 783}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1816944940
@@ -1456,7 +1456,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -1967.4609, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1504,7 +1504,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 700}
+  m_AnchoredPosition: {x: -939, y: 999}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1874379304
@@ -1592,7 +1592,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -2093.4673, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1970,6 +1970,10 @@ PrefabInstance:
       value: "H-hi\u2026 I\u2019m Will\u2026 Please don\u2019t kill me\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: displayText
+      value: 
+      objectReference: {fileID: 439825235}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
       propertyPath: displaytext
       value: 
       objectReference: {fileID: 439825235}
@@ -2013,6 +2017,268 @@ PrefabInstance:
       propertyPath: response3audio
       value: 
       objectReference: {fileID: 8300000, guid: 2a66356eab4b1af4393af13205fa12a8, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: choiceAudio.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: choiceTexts.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: choiceButtons.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: followUpAudio.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: followUpTexts.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: responseAudio.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: responseTexts.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceAudio.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 8d776f82d3bb95d4e849ebb9f69b189c, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceAudio.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: dc0f231c5252e834baddf0832f252b67, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceAudio.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: adfadd7117e571c4db4ba5d35b2968af, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceAudio.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 294034a277c09364dbf0b00a5739ba3e, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceAudio.Array.data[4]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 753ad2b5479469d4292cd4aa310dcb7f, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceAudio.Array.data[5]'
+      value: 
+      objectReference: {fileID: 8300000, guid: e2a1529a86a96f540b4d3d1e54996f9a, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceAudio.Array.data[6]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 9bcfd284b754c014a893c0986f587a77, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceAudio.Array.data[7]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 983daa2422cf32045aacf1d74f3e7e71, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceAudio.Array.data[8]'
+      value: 
+      objectReference: {fileID: 8300000, guid: c77ee2ffd41c4e64b8937b7ba5cfe04f, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceAudio.Array.data[9]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 2ebb6a5a930df674c934e15a1ca164ad, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceTexts.Array.data[0]'
+      value: "It\u2019s Will actually."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceTexts.Array.data[1]'
+      value: "Hi there, I\u2019m Will, pleasure to meet you."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceTexts.Array.data[2]'
+      value: "H-hi\u2026 I\u2019m Will\u2026 Please don\u2019t kill me\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceTexts.Array.data[3]'
+      value: "Uhhh\u2026 Open the p-portal\u2026 Please?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceTexts.Array.data[4]'
+      value: Could you perhaps open the portal for me?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceTexts.Array.data[5]'
+      value: I need you to open the portal for me.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceTexts.Array.data[6]'
+      value: What do you want?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceTexts.Array.data[7]'
+      value: Name it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceTexts.Array.data[8]'
+      value: S-sure, anything to get that portal open.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceTexts.Array.data[9]'
+      value: One box of chocolates coming right up.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceAudio.Array.data[10]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 9f585563a7ec67d46944f6e686349ea3, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceAudio.Array.data[11]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 33d8253ddb3b10849b61bffa0cdf1820, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceTexts.Array.data[10]'
+      value: A-a box of chocolates? Of course!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceTexts.Array.data[11]'
+      value: Really? Chocolates? Sure.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceButtons.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1874379304}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceButtons.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1816944940}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'choiceButtons.Array.data[2]'
+      value: 
+      objectReference: {fileID: 554113981}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'followUpAudio.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: c77ee2ffd41c4e64b8937b7ba5cfe04f, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'followUpAudio.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 9bcfd284b754c014a893c0986f587a77, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'followUpAudio.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 983daa2422cf32045aacf1d74f3e7e71, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'followUpTexts.Array.data[0]'
+      value: open pls
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'followUpTexts.Array.data[1]'
+      value: open pls
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'followUpTexts.Array.data[2]'
+      value: open pls
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseAudio.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a66356eab4b1af4393af13205fa12a8, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseAudio.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a66356eab4b1af4393af13205fa12a8, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseAudio.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a66356eab4b1af4393af13205fa12a8, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseAudio.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: d2cc9b62ced28fd45852fd92a8a849ea, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseAudio.Array.data[4]'
+      value: 
+      objectReference: {fileID: 8300000, guid: d2cc9b62ced28fd45852fd92a8a849ea, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseAudio.Array.data[5]'
+      value: 
+      objectReference: {fileID: 8300000, guid: d2cc9b62ced28fd45852fd92a8a849ea, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseAudio.Array.data[6]'
+      value: 
+      objectReference: {fileID: 8300000, guid: c44b05a3cc15e3b458f9466881512366, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseAudio.Array.data[7]'
+      value: 
+      objectReference: {fileID: 8300000, guid: c44b05a3cc15e3b458f9466881512366, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseAudio.Array.data[8]'
+      value: 
+      objectReference: {fileID: 8300000, guid: c44b05a3cc15e3b458f9466881512366, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseAudio.Array.data[9]'
+      value: 
+      objectReference: {fileID: 8300000, guid: b217bc69fd7fdad48a9e83b3e2388fde, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseTexts.Array.data[0]'
+      value: Well hello there Will. What can I do for you?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseTexts.Array.data[1]'
+      value: Well hello there Will. What can I do for you?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseTexts.Array.data[2]'
+      value: Well hello there Will. What can I do for you?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseTexts.Array.data[3]'
+      value: "The portal? Sure, I\u2019ll open it for you\u2026 For a price\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseTexts.Array.data[4]'
+      value: "The portal? Sure, I\u2019ll open it for you\u2026 For a price\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseTexts.Array.data[5]'
+      value: "The portal? Sure, I\u2019ll open it for you\u2026 For a price\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseTexts.Array.data[6]'
+      value: "It might seem a bit strange, but I\u2019ve heard a rumor going around
+        about a box of chocolates hidden somewhere in the dungeon. So, if you can
+        bring me a box, I\u2019ll open it for you."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseTexts.Array.data[7]'
+      value: "It might seem a bit strange, but I\u2019ve heard a rumor going around
+        about a box of chocolates hidden somewhere in the dungeon. So, if you can
+        bring me a box, I\u2019ll open it for you."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseTexts.Array.data[8]'
+      value: "It might seem a bit strange, but I\u2019ve heard a rumor going around
+        about a box of chocolates hidden somewhere in the dungeon. So, if you can
+        bring me a box, I\u2019ll open it for you."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseTexts.Array.data[9]'
+      value: choc
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseAudio.Array.data[10]'
+      value: 
+      objectReference: {fileID: 8300000, guid: b217bc69fd7fdad48a9e83b3e2388fde, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseAudio.Array.data[11]'
+      value: 
+      objectReference: {fileID: 8300000, guid: b217bc69fd7fdad48a9e83b3e2388fde, type: 3}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseTexts.Array.data[10]'
+      value: choc
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009383373196425712, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
+      propertyPath: 'responseTexts.Array.data[11]'
+      value: choc
+      objectReference: {fileID: 0}
     - target: {fileID: 2804887299244866314, guid: 9f80ad656dfc6f6448393116254931d5, type: 3}
       propertyPath: m_ShadowMesh.m_Mesh
       value: 

@@ -1,213 +1,112 @@
 using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class npcui : MonoBehaviour
 {
+    private AudioSource audioSource;
+    private npc npcScript;
 
-    public bool played = false;
-
-    AudioSource audio;
+    [Header("Audio Clips")]
     public AudioClip one;
     public AudioClip lockedaudio;
-    public AudioClip keuze1audio;
-    public AudioClip keuze2audio;
-    public AudioClip keuze3audio;
+    public AudioClip[] choiceAudio;
+    public AudioClip[] responseAudio;
 
-    public AudioClip response1audio;
-    public AudioClip response2audio;
-    public AudioClip response3audio;
-
-
-
-
-    unlock unlock;
+    [Header("Dialogue Text")]
     public string text;
     public string textlocked;
-    public string textkeuze1;
-    public string textkeuze2;
-    public string textkeuze3;
+    public string[] choiceTexts;
+    public string[] responseTexts;
 
-    public TextMeshProUGUI keuze1;
-    public TextMeshProUGUI keuze2;
-    public TextMeshProUGUI keuze3;
+    [Header("UI Elements")]
+    public TextMeshProUGUI displayText;
+    public TextMeshProUGUI[] choiceButtons;
 
+    private bool isChoosing = false;
+    private int currentChoiceSet = 0;
+    public bool speak = false; // Controlled by npc.cs
 
-    public string textresponse1;
-    public string textresponse2;
-    public string textresponse3;
-
-
-    public TextMeshProUGUI displaytext;
-    
-
-    public bool makechoise;
-    public bool chosen;
-    public bool speak;
-    enum choise
+    private void Start()
     {
-        one,
-        two,
-        three
+        audioSource = GetComponent<AudioSource>();
+        npcScript = GetComponent<npc>();
     }
-    public enum stage
-    {
-        text,
-        textkeuze,
-        textresponse
-    }
-    public stage Stage = new stage();
-    choise Choise = new choise();
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        audio = gameObject.GetComponent<AudioSource>();
-        unlock = GetComponentInChildren<unlock>();
-    }
-    IEnumerator wait(float time)
-    {
-        //Print the time of when the function is first called.
-        Debug.Log("Started Coroutine at timestamp : " + Time.time);
-        
-        //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(time);
-
-
-        //After we have waited 5 seconds print the time again.
-        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
-    }
-    IEnumerator Startaudio(AudioClip otherClip)
-    {
-        if (audio == null)
-        {
-            Debug.LogError("AudioSource is missing on this GameObject!");
-            yield break;
-        }
-
-        if (otherClip == null)
-        {
-            Debug.LogError("No AudioClip assigned!");
-            yield break;
-        }
-        Debug.Log(Startaudio(otherClip));
-        audio.clip = otherClip;
-        audio.Play();
-        yield return new WaitForSeconds(otherClip.length);
-    }
-    IEnumerator PlayAudioAndWait(AudioClip clip, float waitTime)
-    {
-        
-        yield return StartCoroutine(Startaudio(clip)); // Wacht tot de audio klaar is
-        if (Stage == stage.text)
-        {
-            Stage = stage.textkeuze;
-        }
-        if (Stage == stage.textkeuze)
-        {
-            Stage = stage.textresponse;
-        }
-       
-        yield return new WaitForSeconds(waitTime); // Extra wachttijd
-        if (Stage == stage.textresponse)
-        {
-            displaytext.text = ""; 
-        }
-    }
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (speak)
         {
-            if (Stage == stage.text)
+            if (!isChoosing && Input.GetKeyDown(KeyCode.Space))
             {
-                if (!unlock.unlocked)
-                {
-                    if (Input.GetKeyDown(KeyCode.Space) && !makechoise)
-                    {
-                        displaytext.text = textlocked;
-                        StartCoroutine(Startaudio(lockedaudio));
-                        string newtext = "";
-                        StartCoroutine(wait(lockedaudio.length));
-
-                    }
-                }
-                else
-                {
-                    if (Input.GetKeyDown(KeyCode.Space) && !makechoise)
-                    {
-                        displaytext.text = text;
-                        StartCoroutine(Startaudio(one));
-                        if (!chosen)
-                        {
-                            makechoise = true;
-                            keuze1.text = textkeuze1;
-                            keuze2.text = textkeuze2;
-                            keuze3.text = textkeuze3;
-                            Stage = stage.textkeuze;
-                        }
-
-                    }
-                }
-               
+                StartDialogue();
             }
-            else if (Stage == stage.textkeuze)
+
+            if (isChoosing)
             {
-                if (Input.GetKeyDown(KeyCode.Alpha1))
-                {
-                    Choise = choise.one;
-                    displaytext.text = textkeuze1;
-                    StartCoroutine(PlayAudioAndWait(keuze1audio, keuze1audio.length));
-                    
-                    
-
-                    
-                }
-                if (Input.GetKeyDown(KeyCode.Alpha2))
-                {
-                    Choise = choise.two;
-                    displaytext.text = textkeuze2;
-                    StartCoroutine(PlayAudioAndWait(keuze2audio, keuze2audio.length));
-
-
-                }
-                if (Input.GetKeyDown(KeyCode.Alpha3))
-                {
-                    Choise = choise.three;
-                    displaytext.text = textkeuze3;
-                    StartCoroutine(PlayAudioAndWait(keuze3audio, keuze3audio.length));
-
-                }
-
+                if (Input.GetKeyDown(KeyCode.Alpha1)) SelectChoice(0);
+                if (Input.GetKeyDown(KeyCode.Alpha2)) SelectChoice(1);
+                if (Input.GetKeyDown(KeyCode.Alpha3)) SelectChoice(2);
             }
-            else if (Stage == stage.textresponse && !played)
+        }
+    }
+
+    private void StartDialogue()
+    {
+        displayText.text = text;
+        StartCoroutine(PlayAudioAndProceed(one, ShowChoices));
+    }
+
+    private void ShowChoices()
+    {
+        isChoosing = true;
+        for (int i = 0; i < 3; i++)
+        {
+            int choiceIndex = currentChoiceSet * 3 + i;
+            choiceButtons[i].text = choiceTexts[choiceIndex];
+        }
+    }
+
+    private void SelectChoice(int choiceIndex)
+    {
+        isChoosing = false;
+        int globalChoiceIndex = currentChoiceSet * 3 + choiceIndex;
+        displayText.text = choiceTexts[globalChoiceIndex];
+        StartCoroutine(PlayAudioAndProceed(choiceAudio[globalChoiceIndex], () => ShowResponse(globalChoiceIndex)));
+    }
+
+    private void ShowResponse(int globalChoiceIndex)
+    {
+        if (currentChoiceSet < 3)
+        {
+            displayText.text = responseTexts[globalChoiceIndex];
+            StartCoroutine(PlayAudioAndProceed(responseAudio[globalChoiceIndex], () =>
             {
-                if (Choise == choise.one)
-                {
-                    displaytext.text = textresponse1;
-                    StartCoroutine(PlayAudioAndWait(response1audio,response1audio.length));
-                    played = true;
-                }
-                if (Choise == choise.two)
-                {
-                    displaytext.text = textresponse2;
-                    StartCoroutine(PlayAudioAndWait(response2audio, response2audio.length));
-                    played = true;
+                currentChoiceSet++;
+                ShowChoices();
+            }));
+        }
+        else
+        {
+            EndDialogue(); // End dialogue without NPC response
+        }
+    }
 
-                }
-                if (Choise == choise.three)
-                {
-                    displaytext.text = textresponse3;
-                    StartCoroutine(PlayAudioAndWait(response3audio, response3audio.length));
-                    played = true;
+    private void EndDialogue()
+    {
+        displayText.text = " ";
+        // You can add any additional cleanup or logic here
+    }
 
-                }
-
-            }
-        }        
+    private IEnumerator PlayAudioAndProceed(AudioClip clip, System.Action nextStep)
+    {
+        if (clip != null)
+        {
+            audioSource.Stop();
+            audioSource.clip = clip;
+            audioSource.Play();
+            yield return new WaitForSeconds(clip.length);
+        }
+        nextStep?.Invoke();
     }
 }
